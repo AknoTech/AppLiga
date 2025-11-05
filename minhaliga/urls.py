@@ -10,7 +10,8 @@ urlpatterns = [
     path('', include('liga.urls')),
 ]
 
-# Esta linha mágica diz ao Django para servir
-# os arquivos de /media/ quando DEBUG = False
+# ESTE BLOCO MÁGICO CONSERTA O ERRO 500
+# Ele diz ao Django para mostrar as imagens de mídia
+# mesmo quando DEBUG = False
 if not settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
