@@ -1,0 +1,9 @@
+# Este é o arquivo minhaliga/urls.py
+
+from django.contrib import admin
+from django.urls import path, include  # Adicione o "include" aqui
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('liga.urls')),  # <-- ADICIONE ESTA LINHA
+]
